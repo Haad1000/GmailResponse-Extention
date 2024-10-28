@@ -1,6 +1,6 @@
 {
     "manifest_version": 3,
-    "name": "Em(AI)l",
+    "name": "EmAIl",
     "version": 1.0,
     "description": "",
     "permissions": ["activeTab","scripting", "storage", "tabs"],
