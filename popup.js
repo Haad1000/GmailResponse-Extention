@@ -5,14 +5,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const submitContextBtn = document.getElementById('submit-context-btn');
 
     provideContextBtn?.addEventListener('click', () => {
-        contextContainer?.style.display === 'none' ? 'block' : 'none';
+        contextContainer.style.display = contextContainer.style.display === 'none' ? 'block' : 'none';
     });
 
-    generateResponseBtn?.addEventListener('click', () => {
-        chrome.tabs.query({ active: true, currentWindow: true}, (tabs) => {
-            chrome.tabs.sendMessage(tabs[0].id, { action: 'generateResponse', context: ''});
-        });
-    });;
+    // generateResponseBtn?.addEventListener('click', () => {
+    //     chrome.tabs.query({ active: true, currentWindow: true}, (tabs) => {
+    //         chrome.tabs.sendMessage(tabs[0].id, { action: 'generateResponse', context: ''});
+    //     });
+    // });;
 
     submitContextBtn?.addEventListener('click', () => {
         const context = document.getElementById('context-input');
