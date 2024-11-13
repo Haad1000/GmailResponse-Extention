@@ -3,21 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EmAIl</title>
+    <title>Email AI</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div id="popup-container">
 
-        <h1>EmAIl responder</h1>
+        <h1>Email AI Responder</h1>
     
-        <button id="generate-response-btn">Generate Response</button>
+        <!-- <button id="generate-response-btn">Generate Response</button> -->
     
         <button id="provice-context-btn">Provide Context</button>
     
-        <div id="context-container" style="diplay: none">
-            <textarea id="context-input" placeholder="Add extra details or instructions here..."></textarea>
+        <div id="context-container" style="display: none">
+            <textarea id="context-input" placeholder="Add instructions here..."></textarea>
             <button id="submit-context-btn">Submit Context</button>
+            <button id="copy-response">Copy</button>
+            <textarea id="response-box" placeholder="Response will go here"></textarea>
         </div>
 
     </div>
