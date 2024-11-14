@@ -1,6 +1,6 @@
 {
     "manifest_version": 3,
-    "name": "EmAIl",
+    "name": "AI-Email",
     "version": "1.0.0",
     "description": "",
     "permissions": ["activeTab","scripting", "storage", "tabs"],
@@ -11,7 +11,7 @@
     "content_scripts": [
         {
             "matches": ["https://mail.google.com/*"],
-            "js": ["popup.js"],
+            "js": ["content.js"],
             "run_at": "document_end"
         }
     ],
