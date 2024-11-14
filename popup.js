@@ -8,6 +8,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     provideContextBtn?.addEventListener('click', () => {
         contextContainer.style.display = contextContainer.style.display === 'none' ? 'block' : 'none';
+
+        // Send a message to the content script to fetch the email content
+        chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+            if (tabs.length === 0) return;
+
+            chrome.tabs.sendMessage(tabs[0].id, { action: 'fetchEmailContent' }, (response) => {
+                if (response && response.content) {
+                    // Populate the textarea with the fetched email content
+                    contextContainer.value = response.content;
+                } else {
+                    console.error("No content received from content script");
+                }
+            });
+        });
     });
 
     submitContextBtn?.addEventListener('click', async () => {
