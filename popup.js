@@ -80,11 +80,15 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(async () => {
                 console.log("This is the value of scrapped Data outside the function: ", scrappedData);
                 const scrappedEmail = scrappedData;
+                console.log("and here is the value of scrappedEmail: ", scrappedEmail);
                 const output = await promptCall(scrappedEmail);
+                console.log("Here is the value of output before setTiemout: ", output);
                 setTimeout(() => {
                     responseBox.value = output;
-                }, 2);
-            }, 1);
+                    console.log("Here is the value of output inside setTimeout: ", output);
+                }, 1000);
+                console.log("Here is the value of output after setTiemout: ", output);
+            }, 1000);
         }
 
     });
@@ -104,10 +108,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 const scrappedEmail = scrappedData;
                 const promptVar = "This is the context I want to tell you before I give you the email: \n" + context + "\n and this here is the email: \n" + scrappedEmail;
                 const output = await promptCall(promptVar);
+                console.log("Here is the value of output before setTiemout: ", output);
                 setTimeout(() => {
                     responseCtxtBox.value = output;
-                }, 2);
-            }, 1);
+                    console.log("Here is the value of output inside setTiemout: ", output);
+                }, 1000);
+                console.log("Here is the value of output after setTiemout: ", output);
+            }, 1000);
         }
     });
 
