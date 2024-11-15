@@ -131,6 +131,14 @@ textarea:focus {
     background-color: #ffb300; /* Darker yellow on hover */
 }
 
+#copy-response-context {
+    background-color: #ffca28; /* Yellow for copy button */
+}
+
+#copy-response-context {
+    background-color: #ffb300; /* Darker yellow on hover */
+}
+
 /* Background animation for added effect */
 @keyframes backgroundMove {
     0% {
